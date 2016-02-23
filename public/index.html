@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PMS Login page</title>
+		<link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+		<script src="/js/jquery.js"></script>
+		<script>
+			$.ajax({
+				url: "/CurrentUser",
+				method: "GET",
+				success: function(res, status) {
+					alert();
+					if(res != 401) {
+						window.location.href = "home.html";
+					}
+				},
+				error: function(){
+					
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div class="input-lg">
+				<div class="col-sm-8 col-sm-offset-2 text-center">
+					<h1><strong>PROJECT MANAGEMENT SYSTEM</strong></h1>
+					<h2>Registration Form</h2>
+				</div>
+			</div>
+			<div class="col-sm-5 input-lg">
+				<div class="row">
+					<div class="col-sm-11 form-box">
+						<div class="pull-right">
+							<div class="form-top">
+								<div class="form-top-left">
+									<h3><b>User Login</b></h3>
+								</div>
+							</div>
+							<div class="form-bottom">
+								<form role="form" action="" method="" class="registration-form" id="signInForm">
+									<div class="form-group">
+										<input type="text" name="email" placeholder="User Id" class="userName form-control" id="userId">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" placeholder="Password" class="password form-control" id="password">
+									</div>
+									<button type="submit" class="btn btn-info" id="signIn">Sign In!</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2 input-lg text-center">
+				<svg height="500" width="50">
+					<line x1="0" y1="0" x2="0" y2="300" style="stroke:rgb(0,0,0);stroke-width:2"/>
+				</svg>
+			</div>
+			<div class="col-sm-5 input-lg">
+				<div class="row">
+					<div class="col-sm-11 form-box">
+						<div class="pull-left">
+							<div class="form-top">
+								<div class="form-top-left">
+									<h3><b>Free Sign Up</b></h3>
+								</div>
+							</div>
+							<div class="form-bottom">
+								<form role="form" action="" method="" class="registration-form" id="signUpForm">
+									<div class="form-group">
+										<input type="text" name="fullName" placeholder="Full Name" class="userName form-control" id="fullName">
+									</div>
+									<div class="form-group">
+										<input type="text" name="email" placeholder="Email Id" class="userName form-control" id="emailId">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" placeholder="Password" class="password form-control" id="SignUpPswd">
+									</div>
+									<div class="form-group has-feedback">
+										<input type="password" name="confirmPassword" placeholder="Confirm Password" class="confirm password form-control" id="confirmPassword">
+										<span></span>
+									</div>
+									<button type="submit" class="btn btn-info" id="signUp">Sign up!</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="input-lg"></div>
+		<script src="index.js" type="text/Javascript"></script>
+	</body>
+</html>
