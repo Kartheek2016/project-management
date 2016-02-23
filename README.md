@@ -1,5 +1,5 @@
 # project-management
-Using Hibernate (MySQL), Spring framework, Servlet, Html (Bootstrap), jQuery (AJAX) &amp; log4j.
+Using Hibernate (MySQL), Spring framework, Annotaions, Servlet, Html (Bootstrap), jQuery (AJAX) &amp; log4j.
 --------------------------
 Demonstrates the capabilities of the Spring MVC web framework through small, simple examples.
 After reviewing this showcase, you should have a good understanding of what Spring MVC can do and get a feel for how easy it is to use.
